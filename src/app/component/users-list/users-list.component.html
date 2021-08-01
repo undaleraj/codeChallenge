@@ -1,0 +1,32 @@
+<div class="row">
+  <h4>Users List</h4>
+</div>
+<div class="tableHeight">
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of userService.userList?.data" (dblclick)="viewUser(detail.id)">
+        <th scope="row" class="align-middle">{{detail.id}}</th>
+        <td> <img src={{detail.avatar}} class="img-fluid img-thumbnail" alt="..."></td>
+        <td class="align-middle">{{detail.first_name+ ' ' + detail.last_name}}</td>
+        <td class="align-middle">{{detail.email}}</td>
+        <td class="align-middle">
+          <div class="btn-group me-2" role="group" aria-label="First group">
+            <button type="button" class="btn btn-primary" (click)="viewUser(detail.id)">View</button>
+          </div>
+          <div class="btn-group me-2" role="group" aria-label="Second group">
+            <button type="button" class="btn btn-danger" (click)="deleteUser(detail)">Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

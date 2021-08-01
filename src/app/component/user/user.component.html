@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <div class="card text-dark bg-light mb-3">
+        <div class="card-header">User Detail</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-3">
+              <img src={{userDetail.avatar}} class="img-fluid img-thumbnail  align-middle" alt="...">
+            </div>
+            <div class="col-8">
+              <p class="card-text"><b>Name</b> : {{userDetail.first_name+ ' ' + userDetail.last_name}}</p>
+              <p class="card-text"><b>Email</b> : {{userDetail.email}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
